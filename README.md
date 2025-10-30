@@ -36,7 +36,7 @@ Os scripts foram desenvolvidos para rodar em **Python 3.8+** e projetados para f
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/injepro-datalogger-decoder.git
+git clone https://github.com/Pato-a-Jato/InjePro-Datalogger-Decoder.git
 cd injepro-datalogger-decoder
 ```
 
