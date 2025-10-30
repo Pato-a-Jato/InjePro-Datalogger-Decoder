@@ -77,13 +77,38 @@ aa 55 aa
 | 27 | **Roda Tração (km/h)**  | 2     | 59        | 00 00             | 0,0           | valor_dec / 10 | Ignorar casas decimais |                                    |
 | 28 | **Fim do bloco**        | -     | 59        | -                 | -             | -              | -                      | Próximo bloco inicia com `AA 55 AA`|
 
-## Notas Técnicas
+## Observações
 
 - **Endianess:** Todos os campos numéricos utilizam **Little Endian (LSB → MSB)**.
 - **Campos *Não Identificado*:** bytes que, quando modificados, **não alteram os valores exibidos** no software foram marcados como `SOBRANDO` ou `PLACEHOLDER`.
 - **Fórmulas de escala:** derivadas experimentalmente, comparando a leitura exibida no software com o valor em bytes alterado manualmente.
 
-## Próximos passos
+## Como usar o script de decoder
+O script `ds3_to_csv.py` permite extrair todos os frames de um arquivo `.ds3` e gerar um CSV com todos os campos decodificados, incluindo os valores *raw* (hexadecimais) de cada dado.
 
-- Testar blocos adicionais para confirmar offsets e escalas fixas.
-- Criar script para converter `.ds3 → .csv` automaticamente a partir do layout mapeado.
+### Uso
+```bash
+python3 ds3_to_csv.py <arquivo_entrada.ds3> <arquivo_saida.csv>
+```
+
+**Exemplo:**
+
+```bash
+python3 ds3_to_csv.py "Datalogger s3000 EUA.ds3" "dados_decodificados.csv"
+```
+
+- `<arquivo_entrada.ds3>`: caminho para o arquivo `.ds3` que será lido.
+- `<arquivo_saida.csv>`: caminho do arquivo CSV que será gerado com os dados decodificados.
+
+### Resultado esperado
+- Um arquivo CSV contendo:
+  - `frame_index`: índice do frame no arquivo.
+  - `file_offset`: posição inicial do frame no arquivo `.ds3`.
+  - `hex_frame`: bytes completos do frame em hexadecimal.
+  - Cada campo decodificado (rotacao, bateria, MAP, TPS, temperatura, injeções, etc.).
+  - Colunas `_raw` correspondentes aos bytes originais de cada campo.
+
+### Observações
+- O script **ignora bytes do cabeçalho** antes do primeiro frame (`AA 55 AA`).
+- Apenas frames completos (59 bytes) são processados.
+
