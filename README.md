@@ -27,10 +27,9 @@ Os scripts foram desenvolvidos para rodar em **Python 3.8+** e projetados para f
 
 ## Como o binário do datalogger funciona (visão geral)
 
-- O arquivo binário contém blocos ou *frames* com início reconhecível por uma assinatura/sequência fixa (por exemplo `AA 55 AA`).
+- O arquivo binário contém blocos ou *frames* com início reconhecível por uma assinatura/sequência fixa (por exemplo `AA 55 AA` ou `AA 55 81`).
 - Cada bloco representa um conjunto de leituras e campos (por exemplo: rotações, temperatura, voltagem, sensores, status da bateria ou marcação temporal).
-- Os campos dentro do bloco têm tamanho fixo (ex.: `int16`, `uint16`, `int32`) e a codificação é, na maioria dos casos, **little-endian**. Algumas leituras exigem aplicação de escala ou offset para chegar ao valor físico.
-
+- Os campos dentro do bloco têm tamanho fixo (ex.: `uint8`, `uint16`, `int32`) e a codificação é, na maioria dos casos, **little-endian**. Algumas leituras exigem aplicação de escala ou offset para chegar ao valor físico.
 
 ## Como usar
 1. Clone o repositório:
