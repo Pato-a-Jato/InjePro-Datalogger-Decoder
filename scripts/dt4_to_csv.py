@@ -7,7 +7,7 @@ Uso:
 
 Lê um arquivo .dt4, ignora o header de 606 bytes,
 encontra blocos iniciados por AA 55 81, decodifica campos
-conforme tabela fornecida e grava resultado em CSV.
+conforme a tabela grava resultado em CSV.
 """
 
 import sys
