@@ -42,11 +42,11 @@ cd injepro-datalogger-decoder
 2. Rodando o decoder S3000 (exemplo):
 
 ```bash
-python3 scripts/ds3_to_csv.py "examples/Datalogger s3000 EUA.ds3" output_s3000.csv
+python3 scripts/ds3_to_csv.py examples/Datalogger-s3000-EUA.ds3 output_s3000.csv
 ```
 
 3. Rodando o decoder T4000 (exemplo):
 
 ```bash
-python3 scripts/dt4_to_csv.py "examples/Datalogger volta invalidada.dt4" output_t4000.csv
+python3 scripts/dt4_to_csv.py examples/Datalogger-volta-invalidada.dt4 output_t4000.csv
 ```
