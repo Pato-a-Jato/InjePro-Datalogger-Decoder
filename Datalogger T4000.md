@@ -68,13 +68,10 @@ e8 03 13 00 30 00 00 00 1c a0 6f 01 6f 01 6f 01
 f2 01 83 01 42 00 06 01 d3 01 de 01 75 01 00 00
 00 00 00 00 00 00 00 00 20 00 00 00 00 00
 
-
+aa 55 81 -> Indicador de inicio do bloco
 7b 0e -> Rotação -> 3707 -> conversão direta
-
 84 00 -> Bateria -> 13,20 V -> valor_decimal / 100
-
 09 00 -> MAP -> 0,09 bar -> valor_decimal/100
-
 00 00 
 00 00 
 00 00 
