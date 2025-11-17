@@ -1,7 +1,7 @@
 # Seleção de Parâmetros para a Injeção Eletrônica: Traine Pato a Jato
 
 ## Introdução
-Como *Traine*, foi proposto que eu desenvolvesse uma metodologia para seleção dos parâmetros da injeção eletrônica do Potiguara, visando alcançar maior eficiência energética.
+Como *Traine*, foi proposto que eu desenvolvesse uma metodologia para seleção dos parâmetros da injeção eletrônica do protótipo Popygua, visando alcançar maior eficiência energética.
 
 Independentemente do método escolhido para a seleção dos parâmetros, a primeira etapa fundamental é definir como a eficiência energética será medida.
 
